@@ -20,3 +20,13 @@ html, body {
 .navbar a {
     color: #ffffff;
 }
+
+/****** HEADER ******/
+.header {
+    background: #324b4c;
+}
+
+/****** FOOTER ******/
+.footer {
+    background: #222222;
+}

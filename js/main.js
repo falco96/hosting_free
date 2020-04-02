@@ -1,5 +1,6 @@
+// show or hide menu on mobile
 function toggleMenu() {
-    const menu= document.getElementById("menu");
+    let menu = document.getElementById("menu");
 
     if (menu.style.display === "block") {
         menu.style.display = "none";

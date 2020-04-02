@@ -18,9 +18,10 @@
 		$mail_headers .= "Content-Type: text/html; charset=\"utf-8\"\n";
 		$mail_headers .= "Content-Transfer-Encoding: 7bit\n\n";
 
-        if (mail($email, $object, $textm, $mail_headers))
+        if (mail($email, $object, $textm, $mail_headers)) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 ?>

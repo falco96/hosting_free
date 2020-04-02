@@ -1,7 +1,6 @@
 <?php
     class hosting_free{
-        // variables
-
+        // attributes
         private $name;
         private $surname;
         private $username;
@@ -15,39 +14,21 @@
         private $cap;
         private $cf;
         private $piva;
-
-        // end variables
-
-        public function __construct(){
-
-        }
+        
+        // default constructor
+        public function __construct(){}
 
         public function head(){
-            ?>
-                <head>
-                    <meta charset="utf-8">
-                    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-                    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-                    <link rel="stylesheet" type="text/css" href="css/style.css">
-                    <title>Hosting Free</title>
-                </heas>
-            <?php
-        }
-
-        public function js(){
-            ?>
-                <script src="js/main.js"></script>
-            <?php
-        }
-
-        public function footer(){
-            include 'components/footer.php';
-            $this->js();
+           include 'components/head.php';
         }
 
         public function navbar(){
             include 'components/navbar.php';
         }  
+
+        public function header(){
+            include 'components/header.php';
+        }
 
         public function formSignUp(){
             include 'components/form-signup.php';
@@ -56,14 +37,9 @@
         public function presentation(){
             include 'components/presentation.php';
         }
-        
-        public function body(){
-            ?>
-                <div class="flex mb-4 first-components">
-                    <div class="w-1/2 h-12"> <?php $this->presentation(); ?> </div>
-                    <div class="w-1/2 h-12"> <?php $this->formSignUp(); ?> </div>
-                </div>
-            <?php
+
+        public function footer(){
+            include 'components/footer.php';
         }
 
         public function input(){
@@ -83,21 +59,18 @@
                 $this->piva = strip_tags($_POST['piva']);
 
                 // send data to db
-
                 $id = $this->sendDB();
 
                 // send email
-
                 include 'components/sendEmail.php';
 
                 // email a freedeveloper
-
                 $result_us = $this->emailUS($id);
 
                 // email to user
-
                 $result_user = $this->emailToUser();
             }
+
             if(isset($_GET['id'])){
                 $id = strip_tags($_GET['id']);
                 $url = "https://sharekfile.com/hosting/see_hostingUsers.php?id=" . $id;
@@ -107,16 +80,15 @@
 
         public function sendDB(){
             global $conn;
+
             // set id
             $id = $name . $surname . $email . rand();
             $id = md5($id);
 
             // set registration date
-
             $date = date('y/m/d');
 
             // set password
-
             $this->password = hash('sha512', $this->password);
 
             $sql = "INSERT INTO users (id, name, surname, username, password, subdomain, email, remail, address, city, state, cap, cf, piva, date_registration)
@@ -160,25 +132,6 @@
             Il servizio verrà attivato nelle prossime 2 ore. Se dovessi avere bisogno contattaci dal sito: <a href='https://freedeveloper.it'> Free Developer </a> </p>";
             $result = send_mail($email, $object, $textm);
             return $result;
-        }
-
-        public function debugForm(){
-            if(isset($_POST['sign-up'])){
-                echo "<p>" . $this->name . "</p>";
-                echo "<p>" . $this->surname . "</p>";
-                echo "<p>" . $this->username . "</p>";
-                echo "<p>" . $this->password . "</p>";
-                echo "<p>" . $this->subdomain . "</p>";
-                echo "<p>" . $this->email . "</p>";
-                echo "<p>" . $this->remail . "</p>";
-                echo "<p>" . $this->address . "</p>";
-                echo "<p>" . $this->city . "</p>";
-                echo "<p>" . $this->state . "</p>";
-                echo "<p>" . $this->cap . "</p>";
-                echo "<p>" . $this->cf . "</p>";
-                echo "<p>" . $this->piva . "</p>";
-                exit;
-            }
         }
     }
 ?>

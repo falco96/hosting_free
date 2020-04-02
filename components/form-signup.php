@@ -1,140 +1,153 @@
-<div class="w-1/2">
-    <form class="max-w-lg" method="post" action="">
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Nome
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="grid-first-name" name="nome" type="text" placeholder="Mario">
-                <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-            </div>
+<form class="w-full lg:w-1/2" method="post" action="">
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nome">
+                Nome
+            </label>
 
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                    Cognome
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-last-name" name="cognome" type="text" placeholder="Rossi">
-            </div>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="nome" id="nome" type="text" placeholder="Nome *" required>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-username">
-                    Nome utente
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-username" type="text" name="username" placeholder="nome utente">
-            </div>
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cognome">
+                Cognome
+            </label>
 
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                    Password
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-password" type="password" name="password" placeholder="******************">
-                <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-            </div>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="cognome" id="cognome" type="text" placeholder="Cognome *" required>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="username">
+                Username
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="username" id="username" type="text" placeholder="Username *" required>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-sottodominio">
-                    Nome Sottodominio (esempio.host-falco96.com)
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-sottodominio" type="text" name="sottodominio" placeholder="sottodominio.host-falco96.com">
-            </div>
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="password">
+                Password
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="password" id="password" type="password" placeholder="Password *" autocomplete="new-password"
+                required>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap w-full">
+        <div class="w-full mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="sottodominio">
+                Sotto Dominio
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="sottodominio" id="sottodominio" type="text" placeholder="sottodominio.host-falco96.com *"
+                required>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                Email
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="email" id="email" type="email" placeholder="esempio@esempio.it *" required>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
-                    Email
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-email" type="email" name="email" placeholder="esempio@freedeveloper.it">
-            </div>
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="remail">
+                Retype Email
+            </label>
 
-            <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-remail">
-                    Conferma Email
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-remail" type="email" name="remail" placeholder="esempio@freedeveloper.it">
-            </div>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="remail" id="remail" type="email" placeholder="esempio@esempio.it *" required>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/4 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="indirizzo">
+                Indirizzo
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="indirizzo" id="indirizzo" type="text" placeholder="Via Roma, 45 *" required>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-2/5 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-indirizzo">
-                    Indirizzo
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-indirizzo" type="text" name="indirizzo" placeholder="Via Roma, 25">
-            </div>
+        <div class="w-full lg:w-1/4 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="city">
+                Città
+            </label>
 
-            <div class="w-full md:w-1/5 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                    City
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-city" type="text" name="city" placeholder="Milano">
-            </div>
-
-            <div class="w-full md:w-1/5 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                    State
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-state" type="text" name="state" placeholder="Italia">
-            </div>
-
-            <div class="w-full md:w-1/5 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-cap">
-                    CAP
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-cap" type="text" name="cap" placeholder="90210">
-            </div>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="city " id="city" type="text" placeholder="Roma *" required>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                    Codice fiscale
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-codiceFiscale" type="text" name="codice-fiscale" placeholder="Codice Fiscale">
-            </div>
+        <div class="w-full lg:w-1/4 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="state">
+                Nazione
+            </label>
 
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-pIva">
-                    Partita Iva
-                </label>
-                <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="grid-pIva" type="text" name="piva" placeholder="Partita Iva">
-            </div>
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="state" id="state" type="text" placeholder="Italia *" required>
         </div>
 
+        <div class="w-full lg:w-1/4 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cap">
+                CAP
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="cap" id="cap" type="text" placeholder="43001 *" required>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap">
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="codice-fiscale">
+                Codice fiscale
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="codice-fiscale " id="codice-fiscale" type="text" placeholder="Codice Fiscale *">
+        </div>
+
+        <div class="w-full lg:w-1/2 mb-5 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="piva">
+                Partita IVA
+            </label>
+
+            <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="piva" id="piva" type="text" placeholder="Partita IVA *">
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center">
         <button
-            class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit" name="sign-up">
             Sign Up
         </button>
-    </form>
-</div>
+    </div>
+</form>

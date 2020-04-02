@@ -1,20 +1,29 @@
 <?php
     include 'config.php';
     include 'fns/fns.php';
+
     $fns = new hosting_free();
+
     $fns->input();
-    // $fns->debugForm();
 ?>
 
 <html>
+<!-- import head -->
 <?php $fns->head(); ?>
 
 <body>
     <!-- import navbar -->
     <?php $fns->navbar(); ?>
 
-    <div class="flex mb-4">
-        <?php $fns->body(); ?>
+    <!-- import header -->
+    <?php $fns->header(); ?>
+
+    <div class="flex flex-wrap p-5">
+        <!-- import presentation -->
+        <?php $fns->presentation(); ?>
+
+        <!-- import form-signup -->
+        <?php $fns->formSignUp(); ?>
     </div>
 
     <!-- import footer -->

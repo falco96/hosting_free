@@ -1,5 +1,5 @@
-<nav class="flex items-center justify-between flex-wrap p-6 navbar">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
+<nav class="flex flex-wrap items-center justify-between p-5 navbar">
+    <div class="flex items-center flex-shrink-0 text-white mr-5">
         <span class="font-semibold text-xl tracking-tight">Hosting Free</span>
     </div>
 
@@ -14,7 +14,7 @@
         </button>
     </div>
 
-    <div id="menu" class="w-full block flex-grow sm:hidden lg:flex lg:items-center lg:w-auto">
+    <div id="menu" class="w-full flex-grow hidden lg:block lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
             <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4">
                 Services
